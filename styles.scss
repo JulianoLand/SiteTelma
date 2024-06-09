@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "partials/photo";
+@import "partials/header";
+
+body {
+    background-image: url(./assets/logos/fundo.png);
+    background-size: cover;
+    max-width: 1240px;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width:480px) {
+        margin: 10px auto;
+    }
+}
+
+p {
+    font-family: 'bellota', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 800px;
+
+    @media screen and (max-width:480px) {
+        width: 100%;
+        height: 900px;
+        padding: 0 20px;
+    }
+}
+
+.about {
+    background-color: #CC7A5E;
+    color: #fff;
+    width: 90%;
+    margin-top: 20px;
+    padding: 20px 50px;
+    border-radius: 15px;
+
+    & p {
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: 100;
+    }
+
+    @media screen and (max-width:480px) {
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+main {
+    margin-top: 30px;
+    width: 90%;
+
+    & .alcance {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px;
+
+        & img {
+            width: 80px;
+            height: 80px;
+        }
+
+        & p {
+            font-size: 1.4em;
+        }
+    
+
+        & .info {
+            display: flex;
+            gap: 40px;
+
+            & .infoWoman, .infoMan, .infoEarth {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        & .infoEarth {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            & img {
+                width: 80px;
+                height: 80px;
+            }
+
+            & li {
+                list-style-type: none;
+                font-size: 1.2em;
+            }
+        }
+
+        & .infoAlcance {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        @media screen and (max-width:480px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+
+            & p {
+                font-size: 1em;
+            }
+
+            & .infoAlcance {
+                flex-direction: row;
+                gap: 20px;
+
+                p {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+
+    & .description {
+        h2 {
+            margin: 30px 0;
+        }
+
+        p {
+            font-size: 1.8em;
+            text-align: center;
+        }
+    }
+
+    & .works {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h3 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.8em;
+        }
+
+        .worksItem {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .item {
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // gap: 10px;
+
+                .detailItem {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+                
+                img {
+                    flex-shrink: 0;
+                    width: 200px;
+                    height: 200px;
+                    background-color: #d9d9d9;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+    & .contacts {
+        & .social {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+
+        & a {
+            display: inline-block;
+            width: 200px;
+            padding: 10px 0;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            color: black;
+            font-size: 1.5em;
+            background-color: #CC7A5E;
+        }
+    }
+}
