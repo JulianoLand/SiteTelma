@@ -25,6 +25,10 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    img {
+        width: 30px;
+    }
 }
 
 .text {
@@ -32,10 +36,39 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // gap: 40px;
     justify-content: space-evenly;
 
-    @media screen and (max-width:480px) {
+    img, h1 {
+        position: relative;
+        z-index: 12;
+    }
+
+
+    @media (width > 480px) and (width <= 1024px) {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+
+        display: grid;
+        padding: 20px 40px;
+        grid-gap: 120px;
+
+        img {
+            width: 430px;
+            justify-self: end;
+        }
+
+        button {
+            justify-self: center;
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    @media (width <= 480px) {
         width: 100%;
         position: absolute;
         top: 10px;

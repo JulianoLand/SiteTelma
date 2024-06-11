@@ -1,7 +1,12 @@
 .photos {
     width: 50%;
 
-    @media screen and (max-width:480px) {
+    @media (width > 480px) and (width <= 1024px){
+        width: 100%;
+        display: grid;
+    }
+
+    @media (width <= 480px) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -16,15 +21,44 @@
     margin: 30px 0 40px;
 
     & .leftDeg {
-        transform: rotate(-10deg) translate(35px, 35px);
+        transform: translate(35px, 35px);
+        @media (width > 480px) and (width <= 1024px) {
+            position: relative;
+            z-index: 10;
+        }
     }
 
     & .img2 {
-        transform: translate(0, 0);
+        transform: rotate(-10deg) translate(0, 0);
+        @media (width > 480px) and (width <= 1024px) {
+            position: relative;
+            z-index: 9;
+        }
     }
 
     & .rightDeg {
-        transform: rotate(10deg) translate(-35px, 35px);
+        transform: translate(-35px, 35px);
+        @media (width > 480px) and (width <= 1024px) {
+            transform: rotate(15deg);
+        }
+    }
+
+    @media (width > 480px) and (width <= 1024px) {
+        flex-wrap: wrap;
+        
+        .moldura {
+            width: 270px;
+            height: 340px;
+            flex-shrink: 0;
+        }
+    }
+
+    @media (width <= 480px) {
+        .moldura {
+            width: 140px;
+            height: 200px;
+            flex-shrink: 0;
+        }
     }
 }
 
@@ -60,7 +94,7 @@
         font-family: 'cormorant', sans-serif;
     }
 
-    @media screen and (max-width: 480px) {
+    @media (width <= 480px) {
         width: 170px;
         height: 240px;
         border: solid 1px black;
@@ -80,7 +114,11 @@
     transform: rotate(-15deg) translate(0,30px);
     transition-duration: 1s;
 
-    @media screen and (max-width: 480px){
+    @media (width > 480px) and (width <= 1024px) {
+        transform: rotate(15deg) translate(50px, 70px);
+    }
+
+    @media (width <= 480px) {
         position: relative;
         z-index: 10;
         transform:rotate(-15deg) translate(-85px,20px);
@@ -89,10 +127,17 @@
 }
 
 .img2 {
-    transform: translate(300px, -200px);
+    @media (width > 1024px) {
+        transform: translate(300px, -200px);
+    }
     transition-duration: 1s;
 
-    @media screen and (max-width:480px) {
+    @media (width > 480px) and (width <= 1024px) {
+        transform: translateY(-100px);
+        justify-self: end;
+    }
+
+    @media (width <= 480px) {
         transform: translate(0,0);
         position: relative;
         z-index: 9;
@@ -103,7 +148,11 @@
     transform: rotate(15deg) translate(-50px, -350px);
     transition-duration: 1s;
 
-    @media screen and (max-width: 480px){
+    @media (width > 480px) and (width <= 1024px){
+        transform: rotate(-15deg) translate(60px, -170px);
+    }
+
+    @media (width <= 480px){
         transform:rotate(15deg) translate(50px,-50px);
     }
     

@@ -7,7 +7,13 @@
 .photos {
   width: 50%;
 }
-@media screen and (max-width: 480px) {
+@media (width > 480px) and (width <= 1024px) {
+  .photos {
+    width: 100%;
+    display: grid;
+  }
+}
+@media (width <= 480px) {
   .photos {
     width: 100%;
     display: flex;
@@ -23,13 +29,47 @@
   margin: 30px 0 40px;
 }
 .photo2 .leftDeg {
-  transform: rotate(-10deg) translate(35px, 35px);
+  transform: translate(35px, 35px);
+}
+@media (width > 480px) and (width <= 1024px) {
+  .photo2 .leftDeg {
+    position: relative;
+    z-index: 10;
+  }
 }
 .photo2 .img2 {
-  transform: translate(0, 0);
+  transform: rotate(-10deg) translate(0, 0);
+}
+@media (width > 480px) and (width <= 1024px) {
+  .photo2 .img2 {
+    position: relative;
+    z-index: 9;
+  }
 }
 .photo2 .rightDeg {
-  transform: rotate(10deg) translate(-35px, 35px);
+  transform: translate(-35px, 35px);
+}
+@media (width > 480px) and (width <= 1024px) {
+  .photo2 .rightDeg {
+    transform: rotate(15deg);
+  }
+}
+@media (width > 480px) and (width <= 1024px) {
+  .photo2 {
+    flex-wrap: wrap;
+  }
+  .photo2 .moldura {
+    width: 270px;
+    height: 340px;
+    flex-shrink: 0;
+  }
+}
+@media (width <= 480px) {
+  .photo2 .moldura {
+    width: 140px;
+    height: 200px;
+    flex-shrink: 0;
+  }
 }
 
 .moldura {
@@ -62,7 +102,7 @@
   font-size: 1.4rem;
   font-family: "cormorant", sans-serif;
 }
-@media screen and (max-width: 480px) {
+@media (width <= 480px) {
   .moldura {
     width: 170px;
     height: 240px;
@@ -81,7 +121,12 @@
   transform: rotate(-15deg) translate(0, 30px);
   transition-duration: 1s;
 }
-@media screen and (max-width: 480px) {
+@media (width > 480px) and (width <= 1024px) {
+  .leftDeg {
+    transform: rotate(15deg) translate(50px, 70px);
+  }
+}
+@media (width <= 480px) {
   .leftDeg {
     position: relative;
     z-index: 10;
@@ -90,10 +135,20 @@
 }
 
 .img2 {
-  transform: translate(300px, -200px);
   transition-duration: 1s;
 }
-@media screen and (max-width: 480px) {
+@media (width > 1024px) {
+  .img2 {
+    transform: translate(300px, -200px);
+  }
+}
+@media (width > 480px) and (width <= 1024px) {
+  .img2 {
+    transform: translateY(-100px);
+    justify-self: end;
+  }
+}
+@media (width <= 480px) {
   .img2 {
     transform: translate(0, 0);
     position: relative;
@@ -105,7 +160,12 @@
   transform: rotate(15deg) translate(-50px, -350px);
   transition-duration: 1s;
 }
-@media screen and (max-width: 480px) {
+@media (width > 480px) and (width <= 1024px) {
+  .rightDeg {
+    transform: rotate(-15deg) translate(60px, -170px);
+  }
+}
+@media (width <= 480px) {
   .rightDeg {
     transform: rotate(15deg) translate(50px, -50px);
   }
@@ -138,6 +198,9 @@ button {
   align-items: center;
   gap: 10px;
 }
+button img {
+  width: 30px;
+}
 
 .text {
   width: 50%;
@@ -146,7 +209,33 @@ button {
   align-items: center;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 480px) {
+.text img, .text h1 {
+  position: relative;
+  z-index: 12;
+}
+@media (width > 480px) and (width <= 1024px) {
+  .text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    display: grid;
+    padding: 20px 40px;
+    grid-gap: 120px;
+  }
+  .text img {
+    width: 430px;
+    justify-self: end;
+  }
+  .text button {
+    justify-self: center;
+  }
+  .text button img {
+    width: 30px;
+  }
+}
+@media (width <= 480px) {
   .text {
     width: 100%;
     position: absolute;
@@ -202,7 +291,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (max-width: 480px) {
+@media (width > 480px) and (width <= 1024px) {
+  body {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+@media (width <= 480px) {
   body {
     margin: 10px auto;
   }
@@ -218,10 +313,15 @@ h2 {
 
 header {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 800px;
 }
-@media screen and (max-width: 480px) {
+@media (width > 480px) and (width <= 1024px) {
+  header {
+    height: 1000px;
+  }
+}
+@media (width <= 480px) {
   header {
     width: 100%;
     height: 900px;
@@ -242,7 +342,7 @@ header {
   text-align: center;
   font-weight: 100;
 }
-@media screen and (max-width: 480px) {
+@media (width <= 480px) {
   .about h2 {
     font-size: 2em;
   }
@@ -254,6 +354,11 @@ header {
 main {
   margin-top: 30px;
   width: 90%;
+}
+@media (width <= 480px) {
+  main h2 {
+    font-size: 1.6em;
+  }
 }
 main .alcance {
   display: flex;
@@ -295,7 +400,22 @@ main .alcance .infoAlcance {
   flex-direction: column;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 480px) {
+@media (width > 480px) and (width <= 1024px) {
+  main .alcance .info, main .alcance .infoEarth {
+    flex-direction: column;
+    gap: 10px;
+  }
+  main .alcance .infoEarth {
+    justify-content: center;
+    padding: 0 20px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
+  main .alcance .infoEarth div {
+    text-align: center;
+  }
+}
+@media (width <= 480px) {
   main .alcance {
     flex-direction: column;
     align-items: center;
@@ -323,6 +443,11 @@ main .description p {
   font-size: 1.8em;
   text-align: center;
 }
+@media (width <= 480px) {
+  main .description p {
+    font-size: 1.2em;
+  }
+}
 main .works {
   display: flex;
   flex-direction: column;
@@ -348,21 +473,91 @@ main .works .worksItem .item {
   align-items: center;
 }
 main .works .worksItem .item .detailItem {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 10px;
 }
-main .works .worksItem .item img {
+main .works .worksItem .item .titleItem {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+main .works .worksItem .item .textItem {
+  font-size: 1.4em;
+}
+main .works .worksItem .item .imgItem {
   flex-shrink: 0;
   width: 200px;
   height: 200px;
   background-color: #d9d9d9;
   border-radius: 15px;
 }
+@media (width > 480px) and (width <= 1110px) {
+  main .works .worksItem .item {
+    width: 100%;
+  }
+  main .works .worksItem .item .detailItem {
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+  }
+  main .works .worksItem .item .detailItem p {
+    font-size: 1.8em;
+  }
+  main .works .worksItem .item .titleItem {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  main .works .worksItem .item .imgItem {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+@media (width <= 480px) {
+  main .works .worksItem .item {
+    width: 100%;
+  }
+  main .works .worksItem .item .detailItem {
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+  }
+  main .works .worksItem .item .detailItem p {
+    font-size: 1.2em;
+  }
+  main .works .worksItem .item .titleItem {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  main .works .worksItem .item .imgItem {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+main .contacts h2 {
+  margin-top: 30px;
+}
 main .contacts .social {
   display: flex;
   justify-content: space-evenly;
+  flex-shrink: 0;
   margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .contacts .social .wa {
+  background-color: rgba(96, 214, 106, 0.5);
+}
+main .contacts .social .inst {
+  background-color: rgba(242, 77, 88, 0.5);
+}
+main .contacts .social .ttk {
+  background-color: rgba(127, 134, 195, 0.5);
+}
+main .contacts .social .email {
+  background-color: rgba(66, 116, 244, 0.5);
+}
+main .contacts .social .yt {
+  background-color: rgba(146, 146, 146, 0.5);
 }
 main .contacts a {
   display: inline-block;
@@ -373,5 +568,18 @@ main .contacts a {
   border-radius: 10px;
   color: black;
   font-size: 1.5em;
-  background-color: #CC7A5E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "bellota", sans-serif;
+}
+main .contacts a img {
+  width: 30px;
+}
+@media (width <= 480px) {
+  main .contacts .social {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */
