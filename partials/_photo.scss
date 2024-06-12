@@ -58,6 +58,10 @@
             width: 140px;
             height: 200px;
             flex-shrink: 0;
+
+            img {
+                object-fit: cover;
+            }
         }
     }
 }
@@ -86,6 +90,7 @@
             object-fit: cover;
             object-position: center;
             border-radius: 5px;
+            object-fit: cover;
         }
     }
 

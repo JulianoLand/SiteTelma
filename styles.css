@@ -70,6 +70,10 @@
     height: 200px;
     flex-shrink: 0;
   }
+  .photo2 .moldura img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .moldura {
@@ -97,6 +101,7 @@
   -o-object-position: center;
      object-position: center;
   border-radius: 5px;
+  object-fit: cover;
 }
 .moldura p {
   font-size: 1.4rem;
@@ -184,6 +189,10 @@ h2 {
 }
 h2 .word {
   color: #CC7A5E;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -433,7 +442,8 @@ main .alcance .infoAlcance {
     gap: 20px;
   }
   main .alcance .infoAlcance p {
-    font-size: 1.4em;
+    font-size: 1.1em;
+    font-weight: bold;
   }
 }
 main .description h2 {
@@ -490,6 +500,8 @@ main .works .worksItem .item .imgItem {
   height: 200px;
   background-color: #d9d9d9;
   border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (width > 480px) and (width <= 1110px) {
   main .works .worksItem .item {
@@ -581,5 +593,104 @@ main .contacts a img {
   main .contacts .social {
     flex-wrap: wrap;
     gap: 10px;
+  }
+}
+
+.backgroud {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 89;
+}
+.backgroud .fundo {
+  width: 50%;
+  height: 50%;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 88;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backgroud .fundo button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+.backgroud .fundo a {
+  display: inline-block;
+  width: 200px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+  color: black;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "bellota", sans-serif;
+  background-color: rgba(96, 214, 106, 0.5);
+}
+.backgroud .fundo a img {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+.backgroud .fundo h2 {
+  margin: 20px 0;
+}
+.backgroud .fundo p {
+  font-size: 1.6em;
+}
+.backgroud .fundo img {
+  width: 250px;
+  height: 300px;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.backgroud .fundo .container {
+  display: flex;
+  gap: 10px;
+}
+.backgroud .conteudo {
+  display: none;
+}
+@media (width <= 480px) {
+  .backgroud .fundo {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+  }
+  .backgroud .fundo p {
+    text-align: center;
+    font-size: 1em;
+  }
+  .backgroud .fundo button {
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    left: 15px;
+  }
+  .backgroud .fundo a {
+    margin-top: 30px;
+  }
+  .backgroud .container {
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=styles.css.map */
