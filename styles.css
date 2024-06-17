@@ -352,7 +352,8 @@ header {
 .about p {
   font-size: 1.5em;
   text-align: center;
-  font-weight: 100;
+  font-weight: 500;
+  margin-top: 20px;
 }
 @media (width <= 480px) {
   .about h2 {
@@ -394,6 +395,21 @@ main .alcance .info .infoWoman, main .alcance .info .infoMan, main .alcance .inf
   align-items: center;
   gap: 10px;
 }
+main .alcance .seguidores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 500;
+}
+main .alcance .seguidores img {
+  width: 30px;
+  height: 30px;
+}
+main .alcance .seguidores .itemSeguidor {
+  display: flex;
+  gap: 20px;
+}
 main .alcance .infoEarth {
   display: flex;
   align-items: center;
@@ -405,7 +421,8 @@ main .alcance .infoEarth img {
 }
 main .alcance .infoEarth li {
   list-style-type: none;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  font-family: "bellota", sans-serif;
 }
 main .alcance .infoAlcance {
   display: flex;
@@ -434,8 +451,8 @@ main .alcance .infoAlcance {
     gap: 20px;
   }
   main .alcance img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   main .alcance p {
     font-size: 1em;
@@ -479,6 +496,10 @@ main .works .worksItem {
   flex-wrap: wrap;
   gap: 20px;
 }
+main .works .worksItem .ugc {
+  text-decoration: none;
+  color: black;
+}
 main .works .worksItem .item {
   width: 49%;
   display: flex;
@@ -489,6 +510,7 @@ main .works .worksItem .item .detailItem {
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-gap: 10px;
+  align-items: center;
 }
 main .works .worksItem .item .titleItem {
   grid-column-start: 1;
@@ -496,6 +518,12 @@ main .works .worksItem .item .titleItem {
 }
 main .works .worksItem .item .textItem {
   font-size: 1.4em;
+}
+main .works .worksItem .item .textItem span {
+  display: grid;
+  justify-items: center;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 main .works .worksItem .item .imgItem {
   flex-shrink: 0;
@@ -542,6 +570,10 @@ main .works .worksItem .item .imgItem {
     grid-column-end: 3;
     font-size: 1em;
   }
+  main .works .worksItem .item span {
+    display: grid;
+    justify-items: center;
+  }
   main .works .worksItem .item .imgItem {
     width: 100px;
     height: 100px;
@@ -559,6 +591,7 @@ main .contacts .social {
   margin-top: 30px;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 50px;
 }
 main .contacts .social .wa {
   background-color: rgba(96, 214, 106, 0.5);

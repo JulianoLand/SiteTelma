@@ -62,7 +62,8 @@ header {
     & p {
         font-size: 1.5em;
         text-align: center;
-        font-weight: 100;
+        font-weight: 500;
+        margin-top: 20px;
     }
 
     @media (width <= 480px) {
@@ -104,12 +105,31 @@ main {
 
         & .info {
             display: flex;
+            // flex-direction: column;
             gap: 40px;
 
             & .infoWoman, .infoMan, .infoEarth {
                 display: flex;
                 align-items: center;
                 gap: 10px;
+            }
+        }
+
+        .seguidores {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 500;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .itemSeguidor {
+                display: flex;
+                gap: 20px;
             }
         }
 
@@ -125,7 +145,8 @@ main {
 
             & li {
                 list-style-type: none;
-                font-size: 1.2em;
+                font-size: 1.4em;
+                font-family: 'bellota', sans-serif;
             }
         }
 
@@ -159,8 +180,8 @@ main {
             gap: 20px;
 
             & img {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
             }
 
             & p {
@@ -217,6 +238,11 @@ main {
             flex-wrap: wrap;
             gap: 20px;
 
+            .ugc {
+                text-decoration: none;
+                color: black;
+            }
+
             .item {
                 width: 49%;
                 display: flex;
@@ -227,6 +253,7 @@ main {
                     display: grid;
                     grid-template-columns: 200px 1fr;
                     grid-gap: 10px;
+                    align-items: center;
                 }
 
                 .titleItem {
@@ -236,6 +263,13 @@ main {
 
                 .textItem {
                     font-size: 1.4em;
+
+                    span {
+                        display: grid;
+                        justify-items: center;
+                        font-weight: bold;
+                        font-size: 1.3em;
+                    }
                 }
                 
                 .imgItem {
@@ -246,6 +280,7 @@ main {
                     border-radius: 15px;
                     object-fit: cover;
                 }
+                
 
                 @media (width > 480px) and (width <= 1110px) {
                     width: 100%;
@@ -288,6 +323,11 @@ main {
                         font-size: 1em;
                     }
 
+                    span {
+                        display: grid;
+                        justify-items: center;
+                    }
+
                     .imgItem {
                         width: 100px;
                         height: 100px;
@@ -311,6 +351,7 @@ main {
             margin-top: 30px;
             flex-wrap: wrap;
             gap: 10px;
+            margin-bottom: 50px;
 
             .wa {
                 background-color: rgba(96, 214, 106, 0.5);
@@ -357,6 +398,7 @@ main {
             .social {
                 flex-wrap: wrap;
                 gap: 10px;
+                
             }
             
             a {
