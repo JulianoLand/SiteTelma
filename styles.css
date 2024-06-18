@@ -499,6 +499,7 @@ main .works .worksItem {
 main .works .worksItem .ugc {
   text-decoration: none;
   color: black;
+  display: contents;
 }
 main .works .worksItem .item {
   width: 49%;
@@ -533,6 +534,10 @@ main .works .worksItem .item .imgItem {
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .works .worksItem .item span {
+  display: grid;
+  justify-items: center;
 }
 @media (width > 480px) and (width <= 1110px) {
   main .works .worksItem .item {
